@@ -1,0 +1,8 @@
+version: '3'
+services:
+  moneypoint:
+    image: localhost:5000/docker_stockwebscrapper_v2
+    volumes:
+      - ./stockwebscrapper:/usr/src/app
+    command: "python stock_web_scrapper.py"
+    tty: true
